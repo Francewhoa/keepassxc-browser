@@ -36,7 +36,8 @@ TOTPFieldIcon.prototype.initField = function(field) {
         || field.size < 2
         || (field.maxLength > 0 && (field.maxLength < 6 || field.maxLength > 8))
         || field.id.match(ignoreRegex)
-        || field.name.match(ignoreRegex)) {
+        || field.name.match(ignoreRegex)
+        || field.readOnly) {
         return;
     }
 

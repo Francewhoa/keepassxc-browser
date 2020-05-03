@@ -44,7 +44,8 @@ UsernameFieldIcon.prototype.initField = function(field) {
     if (!field
         || field.getAttribute('kpxc-username-field') === 'true'
         || field.getAttribute('kpxc-totp-field') === 'true'
-        || !kpxcFields.isVisible(field)) {
+        || !kpxcFields.isVisible(field)
+        || field.readOnly) {
         return;
     }
 
